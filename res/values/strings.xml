@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyCalcy</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="number0">0</string>
+    <string name="number1">1</string>
+    <string name="number2">2</string>
+    <string name="number3">3</string>
+	<string name="number4">4</string>
+    <string name="number5">5</string>
+    <string name="number6">6</string>
+    <string name="number7">7</string>
+    <string name="number8">8</string>
+    <string name="number9">9</string>
+    <string name="numberdot">.</string>
+    <string name="numbereql">=</string>
+    <string name="numberdiv">/</string>
+    <string name="numbermul">*</string>
+    <string name="numbersub">-</string>
+    <string name="numberadd">+</string>
+    <string name="numberclear">CLEAR</string>
+    <string name="numberdel">DEL</string>
+    <string name="stringspeak">SPEAK</string>
+</resources>
