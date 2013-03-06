@@ -245,7 +245,46 @@ public class MainActivity extends Activity implements OnInitListener {
                 }
                 else
                 {
-                    String mostLikelyThingHeard = matches.get(0);
+                	String mostLikelyThingHeard = null;
+                	for(int i=0;i <10;i++)
+                	{
+                		String strmatch = matches.get(i);
+                		if(Integer.parseInt(strmatch) < 20) mostLikelyThingHeard = strmatch;
+                		else if(strmatch.contains("+") || strmatch.contains("add") ||strmatch.contains("addition"))
+                		{
+                			mostLikelyThingHeard = "Plus";
+                		}
+                		else if(strmatch.contains("-") || strmatch.contains("subtract") ||strmatch.contains("minus"))
+                		{
+                			mostLikelyThingHeard = "Minus";
+                		}
+                		else if(strmatch.contains("/") || strmatch.contains("divide") ||strmatch.contains("by"))
+                		{
+                			mostLikelyThingHeard = "Divide";
+                		}
+                		else if(strmatch.contains("*") || strmatch.contains("times") ||strmatch.contains("multiply"))
+                		{
+                			mostLikelyThingHeard = "Multiply";
+                		}
+                		else if(strmatch.contains("clear") || strmatch.contains("clean"))
+                		{
+                			mostLikelyThingHeard = "Clear";
+                		}
+                		else if(strmatch.contains(".") || strmatch.contains("dot") ||strmatch.contains("point"))
+                		{
+                			mostLikelyThingHeard = "Dot";
+                		}
+                		else if(strmatch.contains("=") || strmatch.contains("equal") ||strmatch.contains("answer"))
+                		{
+                			mostLikelyThingHeard = "Equals";
+                		}
+                		else
+                		{
+                			//
+                		}
+                		if(mostLikelyThingHeard.length() > 0) break;
+                	}
+                    
                     if(mostLikelyThingHeard.contains("0"))
                     {
                     	pressbutton0();
@@ -306,6 +345,11 @@ public class MainActivity extends Activity implements OnInitListener {
                     {
                     	pressbuttoneql();
                     }
+                    else if(mostLikelyThingHeard.contains("Dot"))
+                    {
+                    	pressbuttondot();
+                    }
+                    
                     else
                     {
                     	//
